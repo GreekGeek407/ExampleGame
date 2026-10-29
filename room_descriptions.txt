@@ -1,0 +1,58 @@
+Living Room
+The small living room contains a couch, coffee table, and two 
+armchairs. Pictures of various cousins adorn the walls along 
+with two of your aunt's wretched attempts at oil painting. You 
+can't help but notice that the carpet could use a good 
+vacuuming. 
+
+Doorways lead west to your father's office, north to your 
+bedroom, and east to the kitchen. 
+#
+Bedroom
+This is your domain and has been since your family moved here 
+when you were six. A nightstand with a Superman lamp sits next 
+to your twin bed. Posters of various anime characters cover one 
+wall. A pile of laundry, slowly but surely attaining sentience, 
+occupies the far corner. 
+
+The door to the attic is in the ceiling above the pile of 
+clothes. You can return south to the living room. 
+#
+Office
+The office is cleaner than the rest of the house. The room is mostly 
+tidy save for a growing pile of papers and files on the desk, which has 
+a comfortable-looking chair in front of it. A laptop sits open, displaying 
+a spreadsheet of frightening proportions. A window lets sunlight filter 
+in, bringing life to the otherwise bland decor. 
+
+The door on the east wall leads back to the living room. 
+#
+Kitchen
+Your kitchen has seen a lot of use over the years. Nothing in here is 
+new, but nothing is so neglected that it needs replacing. The faint 
+scent of garlic and onions lingers in the air from last night's dinner. 
+While the counter is a bit weathered, everything is sparkling clean. A 
+block on the counter holds every kind of knife you could possibly need. 
+
+The doorway to the west leads to the living room, and a rickety 
+wooden door leads south to the garage. 
+#
+Garage
+The delicious smells of the kitchen give way to the aroma of industry. 
+Your dad's car sits on the stone floor at the center of the garage. The 
+edges of the room are populated by tables covered in wrenches, nuts, 
+bolts, and many instruments you have no idea how to use. Despite the 
+apparent mess, you're certain that your dad would be able to tell if 
+you moved anything. 
+
+The door at the back of the garage leads north back into the kitchen. 
+#
+Attic
+The attic is just over three feet tall at its tallest point, forcing 
+you into an awkward squat position. The space is filled with various 
+trinkets and discarded clothes, many of which have a thick layer of 
+dust coating them. You spot a box of VHS tapes, several yellowed photo 
+albums, and some long-forgotten holiday decorations, among other things. 
+
+You can climb back down to your bedroom through the trapdoor in the floor. 
+#
