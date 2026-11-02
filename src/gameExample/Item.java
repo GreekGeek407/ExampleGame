@@ -8,8 +8,12 @@ public class Item implements Serializable {
 	private boolean heavy;
 	
 	public Item(String na) {
+		this(na, false);
+	}
+	
+	public Item (String na, boolean h) {
 		name = na;
-		heavy = false;
+		heavy = h;
 	}
 	
 	public String getName() {
@@ -24,9 +28,9 @@ public class Item implements Serializable {
 		name = na;
 	}
 	
-	public void setHeavy() {
-		heavy = true;
-	}
+//	public void setHeavy() {
+//		heavy = true;
+//	}
 	
 	public void use() {
 		Game.print("You can't use the " + name + ".");

@@ -27,24 +27,18 @@ public class World {
 		attic.setLocked(true);
 		garage.setLocked(true);
 		
-		Item officeKey = new OfficeKey();
-		Item tool = new Tool();
 		Item musicBox = new Item("musicbox");
-		Item flashlight = new Item("flashlight");
 		Item knife = new Item("knife");
 		Item mysteriousOrb = new Item("mysteriousorb");
-		Item couch = new Item("couch");
-		Item bed = new Item("bed");
+		Item couch = new Item("couch", true);
+		Item bed = new Item("bed", true);
 		
-		couch.setHeavy();
-		bed.setHeavy();
-		
-		bedroom.addItem(officeKey);
+		//bedroom.addItem(officeKey);
 		bedroom.addItem(bed);
-		livingRoom.addItem(tool);
+		livingRoom.addItem(new Tool());
 		livingRoom.addItem(musicBox);
 		livingRoom.addItem(couch);
-		kitchen.addItem(flashlight);
+		kitchen.addItem(new Flashlight());
 		kitchen.addItem(knife);
 		kitchen.addItem(mysteriousOrb);
 		
