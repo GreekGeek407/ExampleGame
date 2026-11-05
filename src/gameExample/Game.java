@@ -103,7 +103,7 @@ public class Game {
 				break;
 			case "close":
 				if (fullCommand.length < 2) {
-					print("Specify what you're opening!");
+					print("Specify what you're closing!");
 					break;
 				}
 				itemName = "";
@@ -114,7 +114,7 @@ public class Game {
 				break;
 			case "read":
 				if (fullCommand.length < 2) {
-					print("Specify what you're opening!");
+					print("Specify what you're reading!");
 					break;
 				}
 				itemName = "";
