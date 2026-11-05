@@ -90,6 +90,39 @@ public class Game {
 				}
 				move(fullCommand[1]);
 				break;
+			case "open":
+				if (fullCommand.length < 2) {
+					print("Specify what you're opening!");
+					break;
+				}
+				itemName = "";
+				for (int i = 1; i < fullCommand.length; i++) {
+					itemName += fullCommand[i];
+				}
+				openItem(itemName);
+				break;
+			case "close":
+				if (fullCommand.length < 2) {
+					print("Specify what you're opening!");
+					break;
+				}
+				itemName = "";
+				for (int i = 1; i < fullCommand.length; i++) {
+					itemName += fullCommand[i];
+				}
+				closeItem(itemName);
+				break;
+			case "read":
+				if (fullCommand.length < 2) {
+					print("Specify what you're opening!");
+					break;
+				}
+				itemName = "";
+				for (int i = 1; i < fullCommand.length; i++) {
+					itemName += fullCommand[i];
+				}
+				readItem(itemName);
+				break;
 			case "exit":
 				print("Come back soon!");
 				break;
@@ -192,6 +225,10 @@ public class Game {
 		return currentRoom;
 	}
 	
+	public static void addInventoryItem(Item i) {
+		inventory.add(i);
+	}
+	
 	public static Item getItem(String itemName) {
 		for (Item i : inventory) {
 			if (i.getName().toLowerCase().equals(itemName.toLowerCase()))
@@ -222,6 +259,30 @@ public class Game {
 		}
 		else
 			print("You don't have a " + itemName + ".");
+	}
+	
+	public static void openItem(String itemName) {
+		Item i = currentRoom.getItem(itemName);
+		if (i != null)
+			i.open();
+		else
+			print("There is no " + itemName + " to open.");
+	}
+	
+	public static void closeItem(String itemName) {
+		Item i = currentRoom.getItem(itemName);
+		if (i != null)
+			i.close();
+		else
+			print("There is no " + itemName + " to close.");
+	}
+	
+	public static void readItem(String itemName) {
+		Item i = getItem(itemName);
+		if (i != null)
+			i.read();
+		else
+			print("You don't have a " + itemName + " to read.");
 	}
 	
 	public static void loadRoomDescriptions() {

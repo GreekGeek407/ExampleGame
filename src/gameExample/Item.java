@@ -36,6 +36,18 @@ public class Item implements Serializable {
 		Game.print("You can't use the " + name + ".");
 	}
 	
+	public void open() {
+		Game.print("There's nothing to open on the " + name + "!");
+	}
+	
+	public void close() {
+		Game.print("There's nothing to close on the " + name + "!");
+	}
+	
+	public void read() {
+		Game.print("The " + name + " has nothing worth reading.");
+	}
+	
 	public String toString() {
 		return name;
 	}
