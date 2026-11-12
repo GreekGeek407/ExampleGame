@@ -16,7 +16,7 @@ import javax.swing.*;
 public class Game {
 	
 	public static HashMap<String, String> roomDescriptions = new HashMap<>();
-	public static ArrayList<Room> rooms = new ArrayList<>();
+	public static HashMap<String, Room> rooms = new HashMap<>();
 	private static Room currentRoom = World.buildWorld();
 	private static ArrayList<Item> inventory = new ArrayList<>();
 	private static UserInterface ui;
@@ -49,7 +49,7 @@ public class Game {
 		File saveFile = new File("save.sav");
 		try {
 			ObjectInputStream inStream = new ObjectInputStream(new FileInputStream(saveFile));
-			rooms = (ArrayList<Room>)inStream.readObject();
+			rooms = (HashMap<String, Room>)inStream.readObject();
 			currentRoom = (Room)inStream.readObject();
 			inventory = (ArrayList<Item>)inStream.readObject();
 			inStream.close();
@@ -79,6 +79,7 @@ public class Game {
 					.split(" ");
 			String command = fullCommand[0];
 			String itemName;
+			String npcName;
 			switch (command) {
 			case "east", "west", "north", "south", "up", "down":
 				move(command);
@@ -152,6 +153,18 @@ public class Game {
 				}
 				useItem(itemName);
 				break;
+			case "talk":
+				if (fullCommand.length < 2) {
+					print("Specify the name of who you're talking to.");
+					break;
+				}
+				npcName = fullCommand[1];
+				if (currentRoom.getNPC() != null && currentRoom.getNPC().getName().equals(npcName)) {
+					currentRoom.getNPC().talk();
+				}
+				else
+					Game.print("There's no " + npcName + " in this room.");
+				break;	
 			case "i":
 				if (inventory.size() > 0) {
 				print("You are carrying: ");
