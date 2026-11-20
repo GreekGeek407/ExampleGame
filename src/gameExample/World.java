@@ -43,6 +43,8 @@ public class World {
 		kitchen.addItem(mysteriousOrb);
 		attic.addItem(new Safe());
 		
+		kitchen.setNPC(new Fred());
+		
 		return livingRoom;
 	}
 }
